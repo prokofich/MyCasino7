@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.mycasino7.view.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_difficultySelectionFragment"
+            app:destination="@id/difficultySelectionFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.mycasino7.view.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/difficultySelectionFragment"
+        android:name="com.example.mycasino7.view.fragments.DifficultySelectionFragment"
+        android:label="fragment_difficulty_selection"
+        tools:layout="@layout/fragment_difficulty_selection" >
+        <action
+            android:id="@+id/action_difficultySelectionFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_difficultySelectionFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.mycasino7.view.fragments.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_difficultySelectionFragment"
+            app:destination="@id/difficultySelectionFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_overGameFragment"
+            app:destination="@id/overGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/overGameFragment"
+        android:name="com.example.mycasino7.view.fragments.OverGameFragment"
+        android:label="fragment_over_game"
+        tools:layout="@layout/fragment_over_game" >
+        <action
+            android:id="@+id/action_overGameFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_overGameFragment_to_difficultySelectionFragment"
+            app:destination="@id/difficultySelectionFragment" />
+    </fragment>
+</navigation>
